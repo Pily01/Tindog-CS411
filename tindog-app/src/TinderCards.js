@@ -3,6 +3,7 @@ import TinderCard from 'react-tinder-card';
 import { database } from './firebase';
 import { collection, onSnapshot } from 'firebase/firestore';
 
+import PetsIcon from '@mui/icons-material/Pets';
 
 import './TinderCards.css'
 
@@ -45,7 +46,7 @@ function TinderCards() {
                     }}
                     className='card'
                     >
-                        <h2>{pet.name}</h2>
+                        <h2><PetsIcon/>{pet.name}</h2>
                     </div>
                 </TinderCard>
             ))}
