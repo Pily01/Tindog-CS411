@@ -1,6 +1,9 @@
 import './App.css';
-import Header from './Header';
 import React from 'react';
+
+import Header from './Header';
+import TinderCards from './TinderCards';
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,10 +14,10 @@ import {
 function App() {
   return (
     <div className="App">
-      
+      <Header/>
       <Router>
         <Routes>
-          <Route path='/' element={<Header/>}/>
+          <Route path='/' element={<TinderCards/>}/>
         </Routes>
       </Router>
       
