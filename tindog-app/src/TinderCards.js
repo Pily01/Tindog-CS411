@@ -1,5 +1,8 @@
-import  React, {useState} from 'react';
+import  React, {useState, useEffect} from 'react';
 import TinderCard from 'react-tinder-card';
+import { database } from './firebase';
+import { collection, onSnapshot } from 'firebase/firestore';
+
 
 import './TinderCards.css'
 
@@ -16,6 +19,21 @@ function TinderCards() {
         }
     ])
 
+    /*
+    useEffect(() => {
+        
+        const snap = onSnapshot(collection(database, 'pets'), snapshot => {
+           setPets(snapshot.docs.map(doc =>(
+            {id: doc.id, data: doc.data()}
+           )))
+        })
+
+        return () => {
+            snap()
+        }
+
+    }, pets) */
+  
   return (
     <div>
         <div className='TinderCards__cardContainer'>
