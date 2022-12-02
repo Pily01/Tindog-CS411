@@ -13,7 +13,7 @@
 .card > h2{
     position: absolute;
     bottom: 10px;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .TinderCards__cardContainer{
