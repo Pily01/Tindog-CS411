@@ -1,6 +1,7 @@
-
 import  React, {useState} from 'react';
 import TinderCard from 'react-tinder-card';
+
+import './TinderCards.css'
 
 
 function TinderCards() {
@@ -17,19 +18,20 @@ function TinderCards() {
 
   return (
     <div>
-        <h1> Tinder Cards</h1>
-        {pets.map(pet => (
-            <TinderCard className='swipe' key={pet.name} preventSwipe={['up', 'down']}>
-                <div 
-                style = {{
-                    backgroundImage: `url(${pet.image})`
-                }}
-                className='card'
-                >
-                    {pet.name}
-                </div>
-            </TinderCard>
-        ))}
+        <div className='TinderCards__cardContainer'>
+            {pets.map(pet => (
+                <TinderCard className='swipe' key={pet.name} preventSwipe={['up', 'down']}>
+                    <div 
+                    style = {{
+                        backgroundImage: `url(${pet.image})`
+                    }}
+                    className='card'
+                    >
+                        <h2>{pet.name}</h2>
+                    </div>
+                </TinderCard>
+            ))}
+        </div>
     </div>
   )
 }
