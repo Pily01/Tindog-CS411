@@ -3,7 +3,8 @@ import React from 'react';
 
 import Header from './Header';
 import TinderCards from './TinderCards';
-
+import SwipeButtons from './SwipeButtons';
+import Chats from './Chats';
 import {
   BrowserRouter as Router,
   Routes,
@@ -14,10 +15,16 @@ import {
 function App() {
   return (
     <div className="App">
-      <Header/>
       <Router>
+        <Header/>
+        <Routes>
+         <Route path ='/chat' element = {<Chats/>}/>
+         </Routes>
         <Routes>
           <Route path='/' element={<TinderCards/>}/>
+        </Routes>
+        <Routes>
+          <Route path='/' element={<SwipeButtons/>}/>
         </Routes>
       </Router>
       
