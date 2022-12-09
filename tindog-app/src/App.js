@@ -9,6 +9,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Switch,
   Link
 } from "react-router-dom";
 
@@ -16,18 +17,22 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header/>
-        <Routes>
-         <Route path ='/chat' element = {<Chats/>}/>
-         </Routes>
-        <Routes>
-          <Route path='/' element={<TinderCards/>}/>
-        </Routes>
-        <Routes>
-          <Route path='/' element={<SwipeButtons/>}/>
-        </Routes>
+        <Switch>
+          <Route path = "/chat/:person">
+            <Header backButton = "/chat" />
+            <ChatScreen />
+            </Route>
+            <Route path = "/chat">
+            <Header backButton = "/" />
+            <Chats />
+            </Route> 
+            <Route path = "/">
+              <Header />
+              <TinderCards />
+              <SwipeButtons />
+            </Route>
+        </Switch>
       </Router>
-      
     </div>
   );
 }
