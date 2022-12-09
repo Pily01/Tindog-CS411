@@ -5,6 +5,7 @@ import Header from './Header';
 import TinderCards from './TinderCards';
 import SwipeButtons from './SwipeButtons';
 import Chats from './Chats';
+import ChatScreen  from './ChatScreen';
 import {
   BrowserRouter as Router,
   Routes,
