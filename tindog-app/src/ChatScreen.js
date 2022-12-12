@@ -19,7 +19,7 @@ import Avatar from "@material-ui/core/Avatar";
                <p className= "chatScreen_timestamp">You Matched With Niko On 11/08/22</p>
                {messages.map((message) => (
                 message.name ?(
-                   <div className="chartScreen_message">
+                   <div className="chatScreen_message">
                     <Avatar
                         class_Name="chatScreen_image"
                         alt = {message.name}
