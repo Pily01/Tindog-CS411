@@ -17,7 +17,7 @@ import Avatar from "@material-ui/core/Avatar";
         return(
             <div className = "chatScreen">
                <p className= "chatScreen_timestamp">You Matched With Niko On 11/08/22</p>
-               {messages.map((message) => (
+               {messages.map((message) => 
                 message.name ?(
                    <div className="chatScreen_message">
                     <Avatar
@@ -32,13 +32,15 @@ import Avatar from "@material-ui/core/Avatar";
                     <div className="chatScreen_message">
                         <p className="chatScreen_textUser">{message.message}</p>
                     </div>
-                )
+                ))}
                 
+                    <form className='chatScreen__input'>
+                        <input className = 'chatScreen__inputField' type="text" placeholder='Type your message..woof!'/>
+                        <button className='chatScreen__inputButton'>SEND</button>
+                    </form>
                 
-               
-
-               ))}
             </div>
+            
         )
     }
 
