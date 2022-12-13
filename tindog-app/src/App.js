@@ -27,10 +27,10 @@ function App() {
          <Route path ='/chat' element = {<Chats/>}/>
          </Routes>
         <Routes>
-          <Route path='/cards' element={<TinderCards/>}/>
+          <Route path='/' element={<TinderCards/>}/>
         </Routes>
         <Routes>
-          <Route path='/cards' element={<SwipeButtons/>}/>
+          <Route path='/' element={<SwipeButtons/>}/>
         </Routes>
       </Router>
       
